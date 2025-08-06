@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic document metadata -->
+    <meta charset="UTF-8"> <!-- Character encoding for proper text rendering -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive viewport settings -->
+    <title>Enhanced HTML5 Form Assignment</title> <!-- Page title shown in browser tab -->
+</head>
+<body>
+    <!-- Header section with main navigation -->
+    <header>
+        <h1>Enhanced HTML5 Form Assignment</h1> <!-- Main page heading -->
+        <nav aria-label="Main navigation"> <!-- Accessible navigation landmark -->
+            <ul>
+                <!-- Navigation links to page sections -->
+                <li><a href="#info">Info</a></li>
+                <li><a href="#media">Media</a></li>
+                <li><a href="#form">Form</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content container -->
+    <main>
+        <!-- Information section -->
+        <section>
+            <h2>About This Page</h2>
+            <p>This page demonstrates a well-structured HTML5 document featuring lists, tables, media, and a complete, accessible form with validation.</p>
+            
+            <h3>Features</h3>
+            <ul> <!-- Unordered list of page features -->
+                <li>Semantic HTML5 structure</li>
+                <li>Accessible navigation and layout</li>
+                <li>Media elements (image, audio and video)</li>
+                <li>Table with sample data</li>
+                <li>Comprehensive HTML5 form with validation</li>
+            </ul>
+            
+            <h3>Sample Table</h3>
+            <table border="1"> <!-- Sample data table with border -->
+                <caption>Team Members</caption> <!-- Table description for accessibility -->
+                <thead> <!-- Table header section -->
+                    <tr>
+                        <th>Name</th> <!-- Table header cells -->
+                        <th>Role</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody> <!-- Table body with sample data -->
+                    <tr>
+                        <td>Obulejo Ivan</td> <!-- Table data cells -->
+                        <td>Designer</td>
+                        <td>Obulejo@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Inza Emma</td>
+                        <td>Developer</td>
+                        <td>inza@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Mokomiku Esther</td>
+                        <td>Manager</td>
+                        <td>Mokomiku@gmail.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Media showcase section -->
+        <section>
+            <fieldset> <!-- Grouping related media elements -->
+                <h2>Media Showcase</h2>
+                <figure> <!-- Self-contained media content -->
+                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" 
+                         alt="Nature landscape" 
+                         width="400" height="250"> <!-- Image with alt text for accessibility -->
+                    <figcaption>Nature Image</figcaption> <!-- Image caption -->
+                </figure>
+                <figure>
+                    <video width="400" controls> <!-- Video player with controls -->
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                        Your browser does not support the video tag. <!-- Fallback text -->
+                    </video>
+                    <figcaption>Sample video: Big Buck Bunny</figcaption>
+                </figure>
+                <figure>
+                    <audio width="400" controls> <!-- Audio player with controls -->
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                        Your browser does not support the video tag. <!-- Fallback text -->
+                    </audio>
+                    <figcaption>Sample audio: Big Buck Bunny sound track</figcaption>
+                </figure>
+            </fieldset>
+        </section>
+
+        <!-- Registration form section -->
+        <section>
+            <fieldset>
+                <h2>Registration Form</h2>
+                <!-- Form with post method and autocomplete enabled -->
+                <form action="#" method="post" autocomplete="on">
+                    <!-- First row of form fields -->
+                    <div >
+                        <div>
+                            <label for="fullname">Full Name</label>
+                            <input type="text" id="fullname" name="fullname" 
+                                   placeholder="Enter your full name" 
+                                   required autocomplete="name"> <!-- Required field with name autocomplete -->
+                        </div><br/>
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" 
+                                   placeholder="you@example.com" 
+                                   required autocomplete="email"> <!-- Email validation built-in -->
+                        </div>
+                    </div><br/>
+                    
+                    <!-- Second row of form fields -->
+                    <div>
+                        <div>
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" 
+                                   placeholder="Create a password" 
+                                   required minlength="8" 
+                                   autocomplete="new-password"> <!-- Password with minimum length requirement -->
+                        </div><br/>
+                        <div>
+                            <label for="dob">Date of Birth</label>
+                            <input type="date" id="dob" name="dob" required> <!-- Date picker -->
+                        </div>
+                    </div><br/>
+                    
+                    <!-- Third row of form fields -->
+                    <div>
+                        <div>
+                            <label for="gender">Gender</label>
+                            <select id="gender" name="gender" required> <!-- Dropdown select -->
+                                <option value="" disabled selected>Select</option>
+                                <option value="female">Female</option>
+                                <option value="male">Male</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div><br/>
+                        <div>
+                            <label for="country">Country</label>
+                            <input type="text" id="country" name="country" 
+                                   placeholder="Country" 
+                                   autocomplete="country" 
+                                   value="Uganda" readonly> <!-- Read-only field -->
+                        </div>
+                    </div><br/>
+                    
+                    <!-- Fourth row of form fields -->
+                    <div >
+                        <div>
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" 
+                                   placeholder="e.g. +256234567890" 
+                                   pattern="^\\+?[0-9]{10,15}$" 
+                                   required autocomplete="tel"> <!-- Phone number with regex pattern validation -->
+                        </div><br/>
+                        <div>
+                            <label for="website">Website</label>
+                            <input type="url" id="website" name="website" 
+                                   placeholder="https://yourwebsite.com" 
+                                   autocomplete="url"> <!-- URL validation built-in -->
+                        </div>
+                    </div><br/>
+                    
+                    <!-- Textarea for bio -->
+                    <div>
+                        <label for="bio">Short Bio</label>
+                        <textarea id="bio" name="bio" rows="3" 
+                                  placeholder="Tell us about yourself" 
+                                  maxlength="200"></textarea> <!-- Textarea with character limit -->
+                    </div><br/>
+                    
+                    <!-- Checkbox and radio button groups -->
+                    <div>
+                        <fieldset> <!-- Grouping checkboxes -->
+                            <legend>Interests</legend> <!-- Group title -->
+                            <label><input type="checkbox" name="interests" value="design"> Design</label>
+                            <label><input type="checkbox" name="interests" value="development"> Development</label>
+                            <label><input type="checkbox" name="interests" value="management"> Management</label>
+                        </fieldset><br/>
+                        <fieldset> <!-- Grouping radio buttons -->
+                            <legend>Newsletter</legend>
+                            <label><input type="radio" name="newsletter" value="yes" required> Yes</label>
+                            <label><input type="radio" name="newsletter" value="no"> No</label>
+                        </fieldset>
+                    </div><br/>
+                    
+                    <!-- File upload input -->
+                    <div >
+                        <label for="profilepic">Profile Picture</label>
+                        <input type="file" id="profilepic" name="profilepic" 
+                               accept="image/*"> <!-- Accepts only image files -->
+                    </div><br/>
+                    
+                    <!-- Form submission button -->
+                    <input type="submit" value="Register">
+                </form>
+            </fieldset>
+        </section>
+    </main>
+
+    <!-- Page footer -->
+    <footer>
+        <p>&copy; 2025 Enhanced Form. All rights reserved.</p> <!-- Copyright notice -->
+    </footer>
+</body>
+</html>
